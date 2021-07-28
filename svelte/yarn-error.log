@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/kristpornpairin/.nvm/versions/node/v14.16.1/bin/node /Users/kristpornpairin/.nvm/versions/node/v14.16.1/bin/yarn
+  /Users/kristpornpairin/.nvm/versions/node/v14.16.1/bin/node /Users/kristpornpairin/.nvm/versions/node/v14.16.1/bin/yarn add @math.gl
 
 PATH: 
   /Users/kristpornpairin/Library/Android/sdk/platform-tools:/usr/local/opt/gnu-getopt/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/expat/bin:/Users/kristpornpairin/.sdkman/candidates/kotlin/current/bin:/Users/kristpornpairin/.krew/bin:/Users/kristpornpairin/.nvm/versions/node/v14.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/kristpornpairin/.cargo/bin:/tools:/platform-tools:/Users/kristpornpairin/.linkerd2/bin
@@ -14,8 +14,8 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/local-rust: Not found
-      at Request.params.callback [as _callback] (/Users/kristpornpairin/.nvm/versions/node/v14.16.1/lib/node_modules/yarn/lib/cli.js:66988:18)
+  Error: https://registry.yarnpkg.com/@math.gl: Request "https://registry.yarnpkg.com/@math.gl" returned a 405
+      at Request.params.callback [as _callback] (/Users/kristpornpairin/.nvm/versions/node/v14.16.1/lib/node_modules/yarn/lib/cli.js:66997:18)
       at Request.self.callback (/Users/kristpornpairin/.nvm/versions/node/v14.16.1/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (events.js:315:20)
       at Request.<anonymous> (/Users/kristpornpairin/.nvm/versions/node/v14.16.1/lib/node_modules/yarn/lib/cli.js:141634:10)
@@ -41,19 +41,20 @@ npm manifest:
       "@sveltejs/adapter-static": "1.0.0-next.13",
       "@sveltejs/kit": "next",
       "@types/cookie": "^0.4.0",
+      "local-rust": "file:../rust/dist",
       "svelte": "^3.34.0",
       "svelte-check": "^2.0.0",
       "svelte-preprocess": "^4.0.0",
       "tslib": "^2.0.0",
-      "typescript": "^4.0.0",
-      "local-rust": "npm link ../rust/dist"
+      "typescript": "^4.0.0"
     },
     "type": "module",
     "dependencies": {
       "@fontsource/fira-mono": "^4.2.2",
       "@lukeed/uuid": "^2.0.0",
       "@rollup/plugin-wasm": "^5.1.2",
-      "cookie": "^0.4.1"
+      "cookie": "^0.4.1",
+      "twgl.js": "^4.19.2"
     }
   }
 
@@ -376,6 +377,9 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.4.tgz#8c202987d7e577766d039a8cd461934c01cda04d"
     integrity sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
   
+  "local-rust@file:../rust/dist":
+    version "0.1.0"
+  
   magic-string@^0.25.7:
     version "0.25.7"
     resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
@@ -572,6 +576,11 @@ Lockfile:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
     integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+  
+  twgl.js@^4.19.2:
+    version "4.19.2"
+    resolved "https://registry.yarnpkg.com/twgl.js/-/twgl.js-4.19.2.tgz#d61c80e435676f1816ea9135f487c7842792a150"
+    integrity sha512-dK58dWDJyDyfJVTywpkb2cgqenFiMYqXXMQAp9AOO7Ed0zQ6K6HOjg9mjoWvk01sdSbd6O2Y6FG/M1SW25X+iQ==
   
   typescript@*, typescript@^4.0.0:
     version "4.3.5"
