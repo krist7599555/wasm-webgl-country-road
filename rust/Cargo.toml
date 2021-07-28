@@ -1,0 +1,78 @@
+[package]
+# name also be npm packages name
+name = "local-rust"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.74", features = ["serde-serialize"]  }
+js-sys = "0.3.51"
+wasm-bindgen-futures = "0.4.24"
+serde = { version = "1.0.80", features = ["derive"] }
+serde_json = "1.0.59"
+serde_derive = "^1.0.59"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'Response',
+  'Window',
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  "console",
+  'HtmlCanvasElement',
+  'WebGlBuffer',
+  'WebGlVertexArrayObject',
+  'WebGl2RenderingContext',
+  'WebGlRenderingContext',
+  'WebGlProgram',
+  'WebGlShader',
+  'WebGlActiveInfo',
+  'WebGlUniformLocation',
+  'WebGl2RenderingContext',
+  'WebGlActiveInfo',
+  'WebGlBuffer',
+  'WebGlContextAttributes',
+  'WebGlContextEvent',
+  'WebGlContextEventInit',
+  'WebGlFramebuffer',
+  'WebGlPowerPreference',
+  'WebGlProgram',
+  'WebGlQuery',
+  'WebGlRenderbuffer',
+  'WebGlRenderingContext',
+  'WebGlSampler',
+  'WebGlShader',
+  'WebGlShaderPrecisionFormat',
+  'WebGlSync',
+  'WebGlTexture',
+  'WebGlTransformFeedback',
+  'WebGlUniformLocation',
+  'WebGlVertexArrayObject',
+  'WebglColorBufferFloat',
+  # 'WebglCompressedTextureAstc',
+  # 'WebglCompressedTextureAtc',
+  # 'WebglCompressedTextureEtc',
+  # 'WebglCompressedTextureEtc1',
+  # 'WebglCompressedTexturePvrtc',
+  # 'WebglCompressedTextureS3tc',
+  # 'WebglCompressedTextureS3tcSrgb',
+  # 'WebglDebugRendererInfo',
+  # 'WebglDebugShaders',
+  # 'WebglDepthTexture',
+  # 'WebglDrawBuffers',
+  # 'WebglLoseContext',
+  # 'WebGlLayer',
+  # 'WebGlLayerInit',
+]
